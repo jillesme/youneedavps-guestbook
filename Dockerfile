@@ -36,8 +36,8 @@ COPY --from=build --chown=node:node /app/next.config.ts ./next.config.ts
 
 RUN mkdir -p /app/data && chown -R node:node /app
 
-USER node
+COPY --chmod=755 scripts/entrypoint.sh /app/scripts/entrypoint.sh
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "node scripts/migrate.mjs && exec pnpm start"]
+CMD ["/app/scripts/entrypoint.sh"]
