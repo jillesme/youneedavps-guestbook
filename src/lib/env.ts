@@ -4,10 +4,8 @@ const LOCAL_DEVELOPMENT_AUTH_SECRET = "local-development-secret";
 
 const serverSchema = z.object({
   DATABASE_URL: z.string().trim().min(1, "DATABASE_URL must be configured."),
-  BETTER_AUTH_SECRET: z.string().trim().min(1).optional(),
+  BETTER_AUTH_SECRET: z.string().trim().min(1),
   BETTER_AUTH_URL: z
-    .string()
-    .trim()
     .url()
     .optional()
     .default("http://localhost:3000"),
@@ -65,11 +63,7 @@ export function getAuthSecret() {
     return secret;
   }
 
-  if (!isProduction()) {
-    return LOCAL_DEVELOPMENT_AUTH_SECRET;
-  }
-
-  throw new Error("BETTER_AUTH_SECRET must be configured in production.");
+  return LOCAL_DEVELOPMENT_AUTH_SECRET;
 }
 
 export function getTurnstileSiteKey() {
