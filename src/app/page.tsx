@@ -29,7 +29,7 @@ export default async function Home() {
         <header className="flex flex-col gap-4 border-b border-zinc-200 pb-6">
           <div>
             <h1 className="text-3xl font-semibold tracking-tight text-zinc-950 sm:text-4xl">
-              youneedavps.com guestbook
+              YouNeedAVPS.com Guestbook
             </h1>
             <p className="mt-3 max-w-2xl text-lg text-zinc-700">
               Sign in, leave a comment, and keep the page simple enough to demo
