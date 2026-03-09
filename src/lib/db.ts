@@ -18,7 +18,7 @@ function openSqlite() {
   const databaseFile = resolveDatabaseFile();
 
   try {
-    const sqlite = new Database(databaseFile, { fileMustExist: true });
+    const sqlite = new Database(databaseFile);
     // WAL mode allows concurrent reads during writes, which matters once auth
     // and guestbook writes happen alongside page reads.
     sqlite.pragma("journal_mode = WAL");
