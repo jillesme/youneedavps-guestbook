@@ -139,23 +139,29 @@ export default async function Home() {
               </div>
             </a>
 
-            <div className="flex gap-3 border border-zinc-200 p-2">
+            <a
+              className="flex gap-3 border border-zinc-200 p-2 no-underline transition hover:border-zinc-300"
+              href="https://www.youtube.com/watch?v=akc-LIzHWaY"
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
-                alt="Placeholder thumbnail for the current guestbook VPS video"
+                alt="Thumbnail for the second youneedavps.com VPS video"
                 className="h-[68px] w-[120px] shrink-0 border border-zinc-200 object-cover"
                 height="360"
-                src="/video-placeholder.svg"
+                src="https://i.ytimg.com/vi/akc-LIzHWaY/hqdefault.jpg"
                 width="480"
               />
               <div className="flex min-w-0 flex-col justify-center gap-1">
                 <strong className="text-sm leading-5 text-zinc-950">
-                  You Need a VPS - ?
+                  You Need a VPS: Deploy Next.js to Production (SQLite +
+                  Dokku)
                 </strong>
                 <p className="text-sm text-zinc-600">
-                  Replace this card with the new video link when it is live.
+                  Watch the second YouTube video on youneedavps.com.
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </section>
       </div>
